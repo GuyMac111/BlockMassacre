@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\..\Desktop\Projects\GemMiners\GemMiners\BackGround.png" />
+    <None Include="..\..\..\..\..\Desktop\Projects\GemMiners\GemMiners\BackGround2.png" />
+    <None Include="..\..\..\..\..\Desktop\Projects\GemMiners\GemMiners\Blue.png" />
+    <None Include="..\..\..\..\..\Desktop\Projects\GemMiners\GemMiners\Green.png" />
+    <None Include="..\..\..\..\..\Desktop\Projects\GemMiners\GemMiners\Purple.png" />
+    <None Include="..\..\..\..\..\Desktop\Projects\GemMiners\GemMiners\Red.png" />
+    <None Include="..\..\..\..\..\Desktop\Projects\GemMiners\GemMiners\Yellow.png" />
+    <None Include="Icon32.ico" />
+    <None Include="Sounds\ButtonConfirm.mp3" />
+    <None Include="Sounds\ButtonHover.mp3" />
+    <None Include="Sounds\mainBGM.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Block.cpp" />
+    <ClCompile Include="Crash Logs.cpp" />
+    <ClCompile Include="dStructs.cpp" />
+    <ClCompile Include="freetype.cpp" />
+    <ClCompile Include="Grid.cpp" />
+    <ClCompile Include="HUD.cpp" />
+    <ClCompile Include="lodepng.cpp" />
+    <ClCompile Include="mainClass.cpp" />
+    <ClCompile Include="MenuButton.cpp" />
+    <ClCompile Include="scorePopUp.cpp" />
+    <ClCompile Include="SoundManager.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="titleScreen.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Block.h" />
+    <ClInclude Include="dStructs.h" />
+    <ClInclude Include="freetype.h" />
+    <ClInclude Include="Grid.h" />
+    <ClInclude Include="HUD.h" />
+    <ClInclude Include="lodepng.h" />
+    <ClInclude Include="MenuButton.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="scorePopUp.h" />
+    <ClInclude Include="SoundManager.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="titleScreen.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="JAE.rc" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E2D10C15-FA26-4518-B78B-D98E44146D6A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>JAE</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <ExecutablePath>C:\Program Files\GNUwin32\freetype-2.4.11\bin;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>C:\Program Files\GNUwin32\freetype-2.4.11\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\GNUwin32\freetype-2.4.11\lib;$(LibraryPath)</LibraryPath>
+    <TargetName>Block Massacre</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <ExecutablePath>C:\Program Files\GNUwin32\freetype-2.4.11\bin;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>C:\Program Files\GNUwin32\freetype-2.4.11\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\GNUwin32\freetype-2.4.11\lib;$(LibraryPath)</LibraryPath>
+    <TargetName>Block Massacre</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <ShowProgress>LinkVerbose</ShowProgress>
+      <AdditionalDependencies>freetype2411MT.lib;irrKlang.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>freetype2411MT.lib;irrKlang.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
